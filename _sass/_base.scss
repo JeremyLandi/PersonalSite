@@ -38,6 +38,7 @@ h6 {
 h1{
     text-shadow: 2px 2px #333;
 }
+
 h4 {
     color: $theme-secondary;
 }
@@ -185,6 +186,22 @@ header {
                 font-size: 16px;
                 margin-bottom: 0px;
             }
+            .links a{
+                color: $theme-dark;
+                font-size: 1.25em; 
+            }
+            .links i {
+                background-color: $theme-primary;
+                border-radius: 10px;
+                border: 1px silver outset;
+            }
+            .links i:hover {
+                background-color: rgba(255,255,255,0);
+                border:none;
+            }
+            .links i:active{
+                border:1px silver inset;
+            }
         }
     }
     @media (min-width: 768px) {
@@ -226,6 +243,17 @@ header {
     p {
         margin-bottom: 0;
     }
+}
+
+.portfolio {
+    margin-bottom: 10px;
+}
+
+.close-modal {
+    float: right;
+    margin-right: 30px;
+    margin-top: 20px;
+    cursor: pointer;
 }
 
 .portfolio-box {
@@ -302,6 +330,9 @@ header {
     color: $theme-primary;
 }
 
+.section-heading h2{
+    font-size: 100px;
+}
 .no-gutter > [class*='col-'] {
     padding-right:0;
     padding-left:0;
@@ -549,4 +580,12 @@ body {
     .timeline>li.timeline-inverted>.timeline-panel {
         padding: 0 100px 20px 20px
     }
+}
+
+// CONTACT SECTION 
+
+#contact {
+    color: $theme-primary;
+    margin-top: 0px;
+    padding-top:0px;
 }
