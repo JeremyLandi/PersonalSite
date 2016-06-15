@@ -75,7 +75,6 @@ aside {
 }
 
 // Navigation
-
 .navbar-default {
     background-color: white;
     border-color: rgba($theme-dark, .5);
@@ -155,7 +154,6 @@ aside {
 }
 
 // Homepage Header
-
 header {
     position: relative;
     width: 100%;
@@ -193,14 +191,14 @@ header {
             .links i {
                 background-color: $theme-primary;
                 border-radius: 10px;
-                border: 1px silver outset;
+                border: 2px silver outset;
             }
             .links i:hover {
                 background-color: rgba(255,255,255,0);
                 border:none;
             }
             .links i:active{
-                border:1px silver inset;
+                border:2px silver inset;
             }
         }
     }
@@ -223,13 +221,23 @@ header {
                     margin-left: auto;
                     margin-right: auto;
                 }
+
             }
         }
     }
+        @media (min-width: 1199px) {
+        .header-content {
+            .header-content-inner {
+                .row {
+                    margin-right: 15%;
+                }
+            }
+        }
+    }
+
 }
 
 // Sections
-
 .section-heading {
     margin-top: 0;
 }
@@ -245,6 +253,7 @@ header {
     }
 }
 
+// Portfolio
 .portfolio {
     margin-bottom: 10px;
 }
@@ -313,7 +322,6 @@ header {
 }
 
 //Technologies
-
 .devicon {
     width: 45%;
     margin-top: 30px;
@@ -325,74 +333,18 @@ header {
     }
 }
 
-// Bootstrap Overrides
-.text-primary {
-    color: $theme-primary;
-}
-
-.section-heading h2{
-    font-size: 100px;
-}
-.no-gutter > [class*='col-'] {
-    padding-right:0;
-    padding-left:0;
-}
-
-// Button Styles
-.btn-default {
-    @include button-variant($theme-dark, white, white);
-}
-
-.btn-primary {
-    @include button-variant(white, $theme-primary, $theme-primary);
-}
-
-.btn {
-    @include sans-serif-font;
-    border: none;
-    border-radius: 300px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.btn-xl {
-    padding: 15px 30px;
-}
-
 // Contact
+#contact {
+    background-color: $theme-primary;
+    margin-top: 0px;
+    padding-bottom: 50px;
+    padding-top:50px;
+    color: $theme-light;
+}
 #contact .fa {
     color: $theme-dark;
     font-size: 4em;
 }
-
-// Extras
-// -- Highlight Color Customization
-::-moz-selection {
-    color: white;
-    text-shadow: none;
-    background: $theme-dark;
-}
-
-::selection {
-    color: white;
-    text-shadow: none;
-    background: $theme-dark;
-}
-
-img::selection {
-    color: white;
-    background: transparent;
-}
-
-img::-moz-selection {
-    color: white;
-    background: transparent;
-}
-
-body {
-    -webkit-tap-highlight-color: $theme-dark;
-}
-
 
 // TimeLine
 .timeline {
@@ -461,7 +413,7 @@ body {
     color: #fff;
     border-radius: 100%;
     border: 7px solid #f1f1f1;
-    text-align: center
+    text-align: center;
 }
 
 .timeline>li .timeline-image h4 {
@@ -500,7 +452,9 @@ body {
 }
 
 .timeline .timeline-heading h4.subheading {
-    text-transform: none
+    text-transform: none;
+    color: $theme-dark;
+    font-size: 25px;
 }
 
 .timeline .timeline-body>p,
@@ -582,10 +536,73 @@ body {
     }
 }
 
-// CONTACT SECTION 
+// Button Styles
+.btn-default {
+    @include button-variant($theme-dark, white, white);
+}
 
-#contact {
+.btn-primary {
+    @include button-variant(white, $theme-primary, $theme-primary);
+}
+
+.btn {
+    @include sans-serif-font;
+    border: none;
+    border-radius: 300px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.btn-xl {
+    padding: 15px 30px;
+}
+
+// Bootstrap Overrides
+.text-primary {
     color: $theme-primary;
-    margin-top: 0px;
-    padding-top:0px;
+}
+
+h2{
+    font-size: 40px;
+}
+
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+// Extras
+// -- Highlight Color Customization
+::-moz-selection {
+    color: white;
+    text-shadow: none;
+    background: $theme-dark;
+}
+
+::selection {
+    color: white;
+    text-shadow: none;
+    background: $theme-dark;
+}
+
+.fa-cog {
+  color: green;
+}
+
+.icon-cog {
+  color: white;
+}
+
+img::selection {
+    color: white;
+    background: transparent;
+}
+
+img::-moz-selection {
+    color: white;
+    background: transparent;
+}
+
+body {
+    -webkit-tap-highlight-color: $theme-dark;
 }
